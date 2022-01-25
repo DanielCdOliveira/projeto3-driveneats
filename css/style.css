@@ -53,7 +53,7 @@ h4 {
     line-height: 18px;
     color:#A6A6A6;
     margin-bottom: 5px;
-    max-height: 40px;
+    max-height: 36px;
     overflow: hidden;
 }
 .price{
@@ -75,9 +75,6 @@ padding-left: 19px;
 height: calc(100vh - 184px);
 }
 
-section{
-    /* background-color: brown; */
-}
 .options{
     display: flex;
     overflow-x:scroll;
@@ -85,11 +82,16 @@ section{
 .options :last-child{
     margin-right: 0px;
 }
+.produto {
+    background-color: aqua;
+}
+
 .option {
-    background-color: white;
+    background-color: red;
     width: 172px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 18px 14px 14px 14px;
     border-radius: 9px;
     margin-right: 16px;

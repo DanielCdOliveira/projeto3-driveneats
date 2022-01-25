@@ -17,141 +17,144 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700&family=Righteous&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
-    
+    <script src="script/script.js"></script>
     <title>DrivenEats</title>
 
 </head>
 
 <body>
 
-<!-- HEADER -->
+    <!-- HEADER -->
 
-<header>
-    <h1>DrivenEats</h1>
-    <p>Sua comida em 6 minutos</p>
-</header>
+    <header>
+        <h1>DrivenEats</h1>
+        <p>Sua comida em 6 minutos</p>
+    </header>
 
-<!-- CARDÁPIO -->
+    <!-- CARDÁPIO -->
 
-<main>
+    <main>
 
-    <!-- PRATOS -->
-    
-    <section>
-        <h2>Primeiro, seu prato</h2>
-        <div data-identifier="dishes" class="options">
+        <!-- PRATOS -->
 
-            <div data-identifier="food-option" class="prato-options1 option">
-                <img src="images/comida.png" alt="">
-                <h3 data-identifier="food-title">Frango Yin Yang</h3>
-                <h4>Um pouco de batata, um pouco de salada</h4>
-                <p data-identifier="food-price" class="price">R$ 14,90</p>
+        <section>
+            <h2>Primeiro, seu prato</h2>
+            <div data-identifier="dishes" class="options">
+                
+                <div onclick="selecionar(this) "data-identifier="food-option" class="option">
+                    <img src="images/comida.png" alt="">
+                    <h3 data-identifier="food-title">Frango Yin Yang</h3>
+                    <h4>Um pouco de batata, um pouco de salada</h4>
+                    <p data-identifier="food-price" class="price">R$ 14,90</p>
+                </div>
+
+                <div onclick="selecionar(this) "data-identifier="food-option" class="option">
+                    <img src="images/comida.png" alt="">
+                    <h3 data-identifier="food-title">Frango Yin Yang</h3>
+                    <h4>Um pouco de batata, um pouco de salada</h4>
+                    <p data-identifier="food-price" class="price">R$ 14,90</p>
+                </div>
+
+                <div onclick="selecionar(this) "data-identifier="food-option" class="option">
+                    <img src="images/comida.png" alt="">
+                    <h3 data-identifier="food-title">Frango Yin Yang</h3>
+                    <h4>Um pouco de batata, um pouco de salada</h4>
+                    <p data-identifier="food-price" class="price">R$ 14,90</p>
+                </div>
+
+                <div onclick="selecionar(this) "data-identifier="food-option" class="option">
+                    <img src="images/comida.png" alt="">
+                    <h3 data-identifier="food-title">Frango Yin Yang</h3>
+                    <h4>Um pouco de batata, um pouco de salada</h4>
+                    <p data-identifier="food-price" class="price">R$ 14,90</p>
+                </div>
+
             </div>
+        </section>
 
-            <div data-identifier="food-option" class="prato-options1 option">
-                <img src="images/comida.png" alt="">
-                <h3 data-identifier="food-title">Frango Yin Yang</h3>
+        <!-- BEBIDAS -->
 
-                <h4>Um pouco de batata, um pouco de salada</h4>
-                <p data-identifier="food-price" class="price">R$ 14,90</p>
+        <section>
+            <h2>Agora, sua bebida</h2>
+            <div data-identifier="drinks" class="options">
+
+                <div onclick="selecionar(this) "data-identifier="food-option" class="option">
+                    <img src="images/comida.png" alt="">
+                    <h3 data-identifier="food-title">Frango Yin Yang</h3>
+                    <h4>Um pouco de batata, um pouco de salada</h4>
+                    <p data-identifier="food-price" class="price">R$ 14,90</p>
+                </div>
+
+                <div onclick="selecionar(this) "data-identifier="food-option" class="option">
+                    <img src="images/comida.png" alt="">
+                    <h3 data-identifier="food-title">Frango Yin Yang</h3>
+
+                    <h4>Um pouco de batata, um pouco de salada</h4>
+                    <p data-identifier="food-price" class="price">R$ 14,90</p>
+                </div>
+
+                <div onclick="selecionar(this) "data-identifier="food-option" class="option">
+                    <img src="images/comida.png" alt="">
+                    <h3 data-identifier="food-title">Frango Yin Yang</h3>
+                    <h4>Um pouco de batata, um pouco de salada</h4>
+                    <p data-identifier="food-price" class="price">R$ 14,90</p>
+                </div>
+
+                <div onclick="selecionar(this) "data-identifier="food-option" class="option">
+                    <img src="images/comida.png" alt="">
+                    <h3 data-identifier="food-title">Frango Yin Yang</h3>
+                    <h4>Um pouco de batata, um pouco de salada</h4>
+                    <p data-identifier="food-price" class="price">R$ 14,90</p>
+                </div>
+
             </div>
+        </section>
 
-            <div data-identifier="food-option" class="prato-options1 option">
-                <img src="images/comida.png" alt="">
-                <h3 data-identifier="food-title">Frango Yin Yang</h3>
-                <h4>Um pouco de batata, um pouco de salada</h4>
-                <p data-identifier="food-price" class="price">R$ 14,90</p>
+        <!-- SOBREMESAS -->
+
+        <section>
+            <h2>Por fim, sua sobremesa</h2>
+            <div data-identifier="desserts" class="options">
+
+                <div onclick="selecionar(this) "data-identifier="food-option" class="option">
+                    <img src="images/comida.png" alt="">
+                    <h3 data-identifier="food-title">Frango Yin Yang</h3>
+                    <h4>Um pouco de batata, um pouco de salada</h4>
+                    <p data-identifier="food-price" class="price">R$ 14,90</p>
+                </div>
+
+                <div onclick="selecionar(this) "data-identifier="food-option" class="option">
+                    <img src="images/comida.png" alt="">
+                    <h3 data-identifier="food-title">Frango Yin Yang</h3>
+                    <h4>Um pouco de batata, um pouco de salada</h4>
+                    <p data-identifier="food-price" class="price">R$ 14,90</p>
+                </div>
+
+                <div onclick="selecionar(this) "data-identifier="food-option" class="option">
+                    <img src="images/comida.png" alt="">
+                    <h3 data-identifier="food-title">Frango Yin Yang</h3>
+                    <h4>Um pouco de batata, um pouco de salada</h4>
+                    <p data-identifier="food-price" class="price">R$ 14,90</p>
+                </div>
+
+                <div onclick="selecionar(this) "data-identifier="food-option" class="option">
+                    <img src="images/comida.png" alt="">
+                    <h3 data-identifier="food-title">Frango Yin Yang</h3>
+                    <h4>Um pouco de batata, um pouco de salada</h4>
+                    <p data-identifier="food-price" class="price">R$ 14,90</p>
+                </div>
+
             </div>
+        </section>
 
-            <div data-identifier="food-option" class="prato-options1 option">
-                <img src="images/comida.png" alt="">
-                <h3 data-identifier="food-title">Frango Yin Yang</h3>
-                <h4>Um pouco de batata, um pouco de salada</h4>
-                <p data-identifier="food-price" class="price">R$ 14,90</p>
-            </div>
-            
-        </div>
-    </section>
+    </main>
 
-    <section>
-        <h2>Agora, sua bebida</h2>
-        <div data-identifier="drinks" class="options">
+    <!--  FOOTER -->
 
-            <div data-identifier="food-option" class="prato-options1 option">
-                <img src="images/comida.png" alt="">
-                <h3 data-identifier="food-title">Frango Yin Yang</h3>
-                <h4>Um pouco de batata, um pouco de salada</h4>
-                <p data-identifier="food-price" class="price">R$ 14,90</p>
-            </div>
-
-            <div data-identifier="food-option" class="prato-options1 option">
-                <img src="images/comida.png" alt="">
-                <h3 data-identifier="food-title">Frango Yin Yang</h3>
-
-                <h4>Um pouco de batata, um pouco de salada</h4>
-                <p data-identifier="food-price" class="price">R$ 14,90</p>
-            </div>
-
-            <div data-identifier="food-option" class="prato-options1 option">
-                <img src="images/comida.png" alt="">
-                <h3 data-identifier="food-title">Frango Yin Yang</h3>
-                <h4>Um pouco de batata, um pouco de salada</h4>
-                <p data-identifier="food-price" class="price">R$ 14,90</p>
-            </div>
-
-            <div data-identifier="food-option" class="prato-options1 option">
-                <img src="images/comida.png" alt="">
-                <h3 data-identifier="food-title">Frango Yin Yang</h3>
-                <h4>Um pouco de batata, um pouco de salada</h4>
-                <p data-identifier="food-price" class="price">R$ 14,90</p>
-            </div>
-            
-        </div>
-    </section>
-
-    <section>
-        <h2>Por fim, sua sobremesa</h2>
-        <div data-identifier="desserts" class="options">
-
-            <div data-identifier="food-option" class="prato-options1 option">
-                <img src="images/comida.png" alt="">
-                <h3 data-identifier="food-title">Frango Yin Yang</h3>
-                <h4>Um pouco de batata, um pouco de salada</h4>
-                <p data-identifier="food-price" class="price">R$ 14,90</p>
-            </div>
-
-            <div data-identifier="food-option" class="prato-options1 option">
-                <img src="images/comida.png" alt="">
-                <h3 data-identifier="food-title">Frango Yin Yang</h3>
-
-                <h4>Um pouco de batata, um pouco de salada</h4>
-                <p data-identifier="food-price" class="price">R$ 14,90</p>
-            </div>
-
-            <div data-identifier="food-option" class="prato-options1 option">
-                <img src="images/comida.png" alt="">
-                <h3 data-identifier="food-title">Frango Yin Yang</h3>
-                <h4>Um pouco de batata, um pouco de salada</h4>
-                <p data-identifier="food-price" class="price">R$ 14,90</p>
-            </div>
-
-            <div data-identifier="food-option" class="prato-options1 option">
-                <img src="images/comida.png" alt="">
-                <h3 data-identifier="food-title">Frango Yin Yang</h3>
-                <h4>Um pouco de batata, um pouco de salada</h4>
-                <p data-identifier="food-price" class="price">R$ 14,90</p>
-            </div>
-            
-        </div>
-    </section>
-
-</main>
-
-<!--  FOOTER -->
-
-<footer>
+    <footer>
         <button>Selecione os 3 itens<br> para fechar o pedido</button>
-</footer>
+    </footer>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
 
 </html>
