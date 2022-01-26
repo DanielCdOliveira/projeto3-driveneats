@@ -138,11 +138,22 @@ footer{
     justify-content: center;
     align-items: center;
 }
-button{
+#botao1:disabled{
     font-size: 20px;
     color: white;
     border-style: none;
     background-color: #CBCBCB;
+    height: 61px;
+    min-width: 364px;
+    left: 25px;
+    bottom: 16px;
+    border-radius: 50px;
+}
+#botao1:enabled{
+    font-size: 20px;
+    color: white;
+    border-style: none;
+    background-color: #32B72F;
     height: 61px;
     min-width: 364px;
     left: 25px;

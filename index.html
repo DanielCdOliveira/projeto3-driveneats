@@ -40,7 +40,7 @@
             <h2>Primeiro, seu prato</h2>
             <div data-identifier="dishes" class="options food">
                 
-                <div onclick="selectFood(this)" id="food1"data-identifier="food-option" class="option">
+                <div onclick="selectFood(this);verificar()"  id="food1"data-identifier="food-option" class="option">
                     <img src="images/comida.png" alt="">
                     <h3 data-identifier="food-title">Frango Yin Yang</h3>
                     <h4>Um pouco de batata, um pouco de salada</h4>
@@ -48,21 +48,21 @@
                     <ion-icon name="checkmark-circle"></ion-icon>
                 </div>
 
-                <div onclick="selectFood(this)" id="food2"data-identifier="food-option" class="option">
+                <div onclick="selectFood(this);verificar()" id="food2"data-identifier="food-option" class="option">
                     <img src="images/comida.png" alt="">
                     <h3 data-identifier="food-title">Frango Yin Yang</h3>
                     <h4>Um pouco de batata, um pouco de salada</h4>
                     <p data-identifier="food-price" class="price">R$ 14,90</p>
                 </div>
 
-                <div onclick="selectFood(this)" id="food3"data-identifier="food-option" class="option">
+                <div onclick="selectFood(this);verificar()" id="food3"data-identifier="food-option" class="option">
                     <img src="images/comida.png" alt="">
                     <h3 data-identifier="food-title">Frango Yin Yang</h3>
                     <h4>Um pouco de batata, um pouco de salada</h4>
                     <p data-identifier="food-price" class="price">R$ 14,90</p>
                 </div>
 
-                <div onclick="selectFood(this)" id="food4"data-identifier="food-option" class="option">
+                <div onclick="selectFood(this);verificar()" id="food4"data-identifier="food-option" class="option">
                     <img src="images/comida.png" alt="">
                     <h3 data-identifier="food-title">Frango Yin Yang</h3>
                     <h4>Um pouco de batata, um pouco de salada</h4>
@@ -78,14 +78,14 @@
             <h2>Agora, sua bebida</h2>
             <div data-identifier="drinks" class="options">
 
-                <div id="drink1" onclick="selectDrink(this) "data-identifier="food-option" class="option">
+                <div id="drink1" onclick="selectDrink(this);verificar() "data-identifier="food-option" class="option">
                     <img src="images/comida.png" alt="">
                     <h3 data-identifier="food-title">Frango Yin Yang</h3>
                     <h4>Um pouco de batata, um pouco de salada</h4>
                     <p data-identifier="food-price" class="price">R$ 14,90</p>
                 </div>
 
-                <div id="drink2" onclick="selectDrink(this) "data-identifier="food-option" class="option">
+                <div id="drink2" onclick="selectDrink(this);verificar() "data-identifier="food-option" class="option">
                     <img src="images/comida.png" alt="">
                     <h3 data-identifier="food-title">Frango Yin Yang</h3>
 
@@ -93,14 +93,14 @@
                     <p data-identifier="food-price" class="price">R$ 14,90</p>
                 </div>
 
-                <div id="drink3" onclick="selectDrink(this) "data-identifier="food-option" class="option">
+                <div id="drink3" onclick="selectDrink(this);verificar() "data-identifier="food-option" class="option">
                     <img src="images/comida.png" alt="">
                     <h3 data-identifier="food-title">Frango Yin Yang</h3>
                     <h4>Um pouco de batata, um pouco de salada</h4>
                     <p data-identifier="food-price" class="price">R$ 14,90</p>
                 </div>
 
-                <div id="drink4" onclick="selectDrink(this) "data-identifier="food-option" class="option">
+                <div id="drink4" onclick="selectDrink(this);verificar() "data-identifier="food-option" class="option">
                     <img src="images/comida.png" alt="">
                     <h3 data-identifier="food-title">Frango Yin Yang</h3>
                     <h4>Um pouco de batata, um pouco de salada</h4>
@@ -116,28 +116,28 @@
             <h2>Por fim, sua sobremesa</h2>
             <div data-identifier="desserts" class="options">
 
-                <div id="dessert1" onclick="selectDessert(this) "data-identifier="food-option" class="option">
+                <div id="dessert1" onclick="selectDessert(this);verificar() "data-identifier="food-option" class="option">
                     <img src="images/comida.png" alt="">
                     <h3 data-identifier="food-title">Frango Yin Yang</h3>
                     <h4>Um pouco de batata, um pouco de salada</h4>
                     <p data-identifier="food-price" class="price">R$ 14,90</p>
                 </div>
 
-                <div id="dessert2" onclick="selectDessert(this) "data-identifier="food-option" class="option">
+                <div id="dessert2" onclick="selectDessert(this);verificar() "data-identifier="food-option" class="option">
                     <img src="images/comida.png" alt="">
                     <h3 data-identifier="food-title">Frango Yin Yang</h3>
                     <h4>Um pouco de batata, um pouco de salada</h4>
                     <p data-identifier="food-price" class="price">R$ 14,90</p>
                 </div>
 
-                <div id="dessert3" onclick="selectDessert(this) "data-identifier="food-option" class="option">
+                <div id="dessert3" onclick="selectDessert(this);verificar() "data-identifier="food-option" class="option">
                     <img src="images/comida.png" alt="">
                     <h3 data-identifier="food-title">Frango Yin Yang</h3>
                     <h4>Um pouco de batata, um pouco de salada</h4>
                     <p data-identifier="food-price" class="price">R$ 14,90</p>
                 </div>
 
-                <div id="dessert4" onclick="selectDessert(this) "data-identifier="food-option" class="option">
+                <div id="dessert4" onclick="selectDessert(this);verificar() "data-identifier="food-option" class="option">
                     <img src="images/comida.png" alt="">
                     <h3 data-identifier="food-title">Frango Yin Yang</h3>
                     <h4>Um pouco de batata, um pouco de salada</h4>
@@ -152,7 +152,7 @@
     <!--  FOOTER -->
 
     <footer>
-        <button>Selecione os 3 itens<br> para fechar o pedido</button>
+        <button onclick="closeOrder()" id="botao1">Selecione os 3 itens<br> para fechar o pedido</button>
     </footer>
     <script src="script/script.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
