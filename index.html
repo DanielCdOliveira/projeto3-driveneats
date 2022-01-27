@@ -38,7 +38,7 @@
 
         <section>
             <h2>Primeiro, seu prato</h2>
-            <div data-identifier="dishes" class="options food">
+            <div data-identifier="dishes" class="options">
 
                 <div onclick="selectFood(this);verificar()" id="food1" data-identifier="food-option" class="option">
                     <img src="images/comida.png" alt="">
@@ -176,10 +176,10 @@
         <div class="modal">
             <div class="modal-pedido">
                 <h5>Confirme seu pedido</h5>
-                <h6>Frango Yin Yang<span>14,90</span></h6>
-                <h6>Frango Yin Yang<span>14,90</span></h6>
-                <h6>Frango Yin Yang<span>14,90</span></h6>
-                <h5>TOTAL<span>R$ 28.60</span></h5>
+                <div class="final"><h6 id="food">Frango Yin Yang</h6><span id="food__price">14,90</span></div>    
+                <div class="final"><h6 id="drink">Frango Yin Yang</h6><span id="drink__price">14,90</span></div>  
+                <div class="final"><h6 id="dessert">Frango Yin Yang</h6><span id="dessert__price">14,90</span></div>  
+                <h5>TOTAL<span>R$  <span id="total">28.60</span></span></h5>
                 <button  id="button2">Tudo certo, pode pedir!</button>
                 <button onclick="cancelar()"id="button3">Cancelar</button>
             </div>

@@ -1,15 +1,8 @@
 document.getElementById("button1").disabled = true;
 
-var confirm = [];
-
-const icon = document.createElement("ion-icon")
-console.log(icon)
-
-
-
-
-
-
+const confirm = [];
+const names = [];
+const values = [];
 
 
 
@@ -19,8 +12,10 @@ function selectFood(opcao) {
   food3.className = "option";
   food4.className = "option";
 
-  opcao.innerHtml 
   opcao.classList.add("selected");
+  names[0] = opcao.children[1].innerText;
+  values[0] = (apenasNumeros(opcao.children[3].innerText))/100;
+
   confirm[0] = true;
 }
 
@@ -31,6 +26,10 @@ function selectDrink(opcao) {
   drink4.className = "option";
 
   opcao.classList.add("selected");
+
+  names[1] = opcao.children[1].innerText;
+  values[1] = (apenasNumeros(opcao.children[3].innerText))/100;
+
   confirm[1] = true;
 }
 
@@ -42,22 +41,43 @@ function selectDessert(opcao) {
 
   opcao.classList.add("selected");
 
+  names[2] = opcao.children[1].innerText;
+  values[2] = (apenasNumeros(opcao.children[3].innerText))/100;
+  
+
   confirm[2] = true;
 }
 
 var clique = document.getElementsByClassName("option");
 
 function verificar() {
-  button1.innerText = "Fechar pedido";
-  button1.style.fontWeight = "700";
   if (confirm[0] && confirm[1] && confirm[2]) {
     document.getElementById("button1").disabled = false;
+    button1.innerText = "Fechar pedido";
+    button1.style.fontWeight = "700";
   }
 }
 
 function closeOrder() {
+  let resultado = values[0] + values[1]+ values[2];
+  
+  food.innerText = names[0];
+  drink.innerText = names[1];
+  dessert.innerText = names[2];
+  total.innerText = resultado;
+
+
+
+
   document.getElementById("modal-closeorder").style = "display:flex;";
 }
+
 function cancelar() {
   document.getElementById("modal-closeorder").style = "display:none;";
+}
+
+function apenasNumeros(string) 
+{
+    let price = string.replace(/[^0-9]/g,'');
+    return parseInt(price);
 }

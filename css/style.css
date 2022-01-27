@@ -61,21 +61,24 @@ h5{
     font-weight: 700;
     line-height: 27px;  
 }
-h6{
-    font-weight: 200;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 22px;
-    line-height: 27px;
-    letter-spacing: 0.018em;
-    margin-bottom: 13px;
+#food__price,#drink__price,#dessert__price{
+    display: block;
 }
 .price{
     font-weight: 400;
     font-size: 16px;
     color: black;
     line-height: 19px;
+}
+.final{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.018em;
+    margin-bottom: 13px;
 }
 
 main {
