@@ -1,14 +1,4 @@
-document.getElementById("botao1").disabled = true;
-
-var food1 = document.getElementById("food1");
-var food2 = document.getElementById("food2");
-var food3 = document.getElementById("food3");
-var food4 = document.getElementById("food4");
-
-var drink1 = document.getElementById("drink1");
-var drink2 = document.getElementById("drink2");
-var drink3 = document.getElementById("drink3");
-var drink4 = document.getElementById("drink4");
+document.getElementById("button1").disabled = true;
 
 var confirm = [];
 
@@ -45,11 +35,16 @@ function selectDessert(opcao) {
 var clique = document.getElementsByClassName("option");
 
 function verificar(){
+  button1.innerText = "Fechar pedido"
+  button1.style.fontWeight = "700";
   if(confirm[0] && confirm[1] && confirm[2]){
-    document.getElementById("botao1").disabled = false;
+
+    document.getElementById("button1").disabled = false;
 }
 }
 
 function closeOrder() {
-   console.log("ola");
+
+
+
 }

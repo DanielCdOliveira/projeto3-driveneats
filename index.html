@@ -152,8 +152,24 @@
     <!--  FOOTER -->
 
     <footer>
-        <button onclick="closeOrder()" id="botao1">Selecione os 3 itens<br> para fechar o pedido</button>
+        <button onclick="closeOrder()" id="button1">Selecione os 3 itens<br> para fechar o pedido</button>
     </footer>
+
+    <div id="modal-closeorder" class="modal-container">
+        <div class="modal">
+            <div class="modal-pedido">
+                <h5>Confirme seu pedido</h5>
+                <h6>Frango Yin Yang<span>14,90</span></h6>
+                <h6>Frango Yin Yang<span>14,90</span></h6>
+                <h6>Frango Yin Yang<span>14,90</span></h6>
+                <h5>TOTAL<span>R$ 28.60</span></h5>
+                <button id="button2">Tudo certo, pode pedir!</button>
+                <button id="button3">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+
     <script src="script/script.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 </body>
