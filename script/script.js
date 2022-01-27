@@ -8,7 +8,7 @@ function selectFood(opcao) {
   food3.className = "option";
   food4.className = "option";
 
-  opcao.className = "option-selected";
+ opcao.classList.add("selected");
   confirm[0] = true;
 }
 
@@ -18,7 +18,7 @@ function selectDrink(opcao) {
   drink3.className = "option";
   drink4.className = "option";
 
-  opcao.className = "option-selected";
+ opcao.classList.add("selected");
   confirm[1] = true;
 }
 
@@ -28,7 +28,7 @@ function selectDessert(opcao) {
   dessert3.className = "option";
   dessert4.className = "option";
 
-  opcao.className = "option-selected";
+  opcao.classList.add("selected");
   confirm[2] = true;
 }
 
@@ -44,7 +44,8 @@ function verificar(){
 }
 
 function closeOrder() {
-
-
-
+  document.getElementById("modal-closeorder").style = "display:flex;";
+}
+function cancelar(){
+  document.getElementById("modal-closeorder").style = "display:none;";
 }
