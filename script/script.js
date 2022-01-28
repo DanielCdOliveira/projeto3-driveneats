@@ -68,7 +68,8 @@ function closeOrder() {
   drink__price.innerText = addVirgula(itemValues[1]);
   dessert__price.innerText = addVirgula(itemValues[2]);
 
-  total.innerText = result;
+  
+  resultDisplay.innerText = result.replace(".", ",");
 
   document.getElementById("modal-closeorder").style = "display:flex;";
 
