@@ -1,50 +1,31 @@
+// desabilitando o botao
 document.getElementById("button1").disabled = true;
 
+// arrays
 const confirm = [];
 const itemNames = [];
 const itemValues = [];
 
-function selectFood(opcao) {
-  food1.className = "option";
-  food2.className = "option";
-  food3.className = "option";
-  food4.className = "option";
+// seleciona os elementos, desmarca selecionados, altera os valores no array e chama funçao "verificar"
+function select(divParent, opcao) {
+  const selecionado = document.querySelector("." + divParent + " .selected");
 
-  opcao.classList.add("selected");
-  itemNames[0] = opcao.children[1].innerText;
-  itemValues[0] = apenasNumeros(opcao.children[3].innerText) / 100;
-
-  confirm[0] = true;
-}
-
-function selectDrink(opcao) {
-  drink1.className = "option";
-  drink2.className = "option";
-  drink3.className = "option";
-  drink4.className = "option";
-
+  let index = getIndex(divParent);
+  
+  if (selecionado !== null){
+    selecionado.classList.remove("selected");
+  } 
+  
   opcao.classList.add("selected");
 
-  itemNames[1] = opcao.children[1].innerText;
-  itemValues[1] = apenasNumeros(opcao.children[3].innerText) / 100;
+  itemNames[index] = opcao.children[1].innerText;
+  itemValues[index] = apenasNumeros(opcao.children[3].innerText) / 100;
+  confirm[index] = true;
 
-  confirm[1] = true;
-}
+  verificar();
+} 
 
-function selectDessert(opcao) {
-  dessert1.className = "option";
-  dessert2.className = "option";
-  dessert3.className = "option";
-  dessert4.className = "option";
-
-  opcao.classList.add("selected");
-
-  itemNames[2] = opcao.children[1].innerText;
-  itemValues[2] = apenasNumeros(opcao.children[3].innerText) / 100;
-
-  confirm[2] = true;
-}
-
+// verifica se as tres opcoes foram escolhidas
 function verificar() {
   if (confirm[0] && confirm[1] && confirm[2]) {
     document.getElementById("button1").disabled = false;
@@ -53,6 +34,7 @@ function verificar() {
   }
 }
 
+// gera os prompts, e adiciona os valores ao modal e chama funçao "redirectToWhatsApp"
 function closeOrder() {
   const name = prompt("Qual seu nome?");
   const adress = prompt("Qual seu endereço?");
@@ -80,6 +62,7 @@ function closeOrder() {
   });
 }
 
+// redireciona para o whatsapp
 function redirectToWhatsApp(itemNames, result, name, adress) {
   let message =
     "Olá, gostaria de fazer o pedido:" +
@@ -103,15 +86,31 @@ function redirectToWhatsApp(itemNames, result, name, adress) {
   window.open(url, "_blank");
 }
 
+// fecha o modal
 function cancelar() {
   document.getElementById("modal-closeorder").style = "display:none;";
 }
 
+// substitui ponto por virgula
 function addVirgula(valor) {
   return valor.toFixed(2).replace(".", ",");
 }
 
+// remove caractes que nao sao numeros
 function apenasNumeros(string) {
   let price = string.replace(/[^0-9]/g, "");
   return parseInt(price);
+}
+
+// gera index para os arrays
+function getIndex(divParent){
+  switch(divParent){
+    case "foodOptions":
+      return 0;
+    case "drinkOptions":
+      return 1;
+    case "dessertOptions":
+      return 2;
+
+  }
 }
