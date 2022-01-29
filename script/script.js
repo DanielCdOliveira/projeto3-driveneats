@@ -8,22 +8,25 @@ const itemValues = [];
 
 // seleciona os elementos, desmarca selecionados, altera os valores no array e chama funçao "verificar"
 function select(divParent, opcao) {
-  const selecionado = document.querySelector("." + divParent + " .selected");
-
   let index = getIndex(divParent);
-  
-  if (selecionado !== null){
-    selecionado.classList.remove("selected");
-  } 
-  
-  opcao.classList.add("selected");
+  if (opcao.classList.contains("selected")) {
+    opcao.classList.remove("selected");
+    confirm[index] = false;
+  } else {
+    const selecionado = document.querySelector("." + divParent + " .selected");
 
-  itemNames[index] = opcao.children[1].innerText;
-  itemValues[index] = apenasNumeros(opcao.children[3].innerText) / 100;
-  confirm[index] = true;
+    if (selecionado !== null) {
+      selecionado.classList.remove("selected");
+    }
 
+    opcao.classList.toggle("selected");
+
+    itemNames[index] = opcao.children[1].innerText;
+    itemValues[index] = apenasNumeros(opcao.children[3].innerText) / 100;
+    confirm[index] = true;
+  }
   verificar();
-} 
+}
 
 // verifica se as tres opcoes foram escolhidas
 function verificar() {
@@ -32,12 +35,13 @@ function verificar() {
     button1.innerText = "Fechar pedido";
     button1.style.fontWeight = "700";
   }
+  else{
+    document.getElementById("button1").disabled = true;
+  }
 }
 
-// gera os prompts, e adiciona os valores ao modal e chama funçao "redirectToWhatsApp"
+// adiciona os valores ao modal e chama funçao "redirectToWhatsApp"
 function closeOrder() {
-  const name = prompt("Qual seu nome?");
-  const adress = prompt("Qual seu endereço?");
 
   let total = itemValues[0] + itemValues[1] + itemValues[2];
   const result = total.toFixed(2);
@@ -50,7 +54,6 @@ function closeOrder() {
   drink__price.innerText = addVirgula(itemValues[1]);
   dessert__price.innerText = addVirgula(itemValues[2]);
 
-  
   resultDisplay.innerText = result.replace(".", ",");
 
   document.getElementById("modal-closeorder").style = "display:flex;";
@@ -58,12 +61,16 @@ function closeOrder() {
   const confirmButton = document.getElementById("button2");
 
   confirmButton.addEventListener("click", function () {
-    redirectToWhatsApp(itemNames, result, name, adress);
+    redirectToWhatsApp(itemNames, result);
   });
 }
 
-// redireciona para o whatsapp
-function redirectToWhatsApp(itemNames, result, name, adress) {
+// gera os prompts e redireciona para o whatsapp
+function redirectToWhatsApp(itemNames, result) {
+
+  const name = prompt("Qual seu nome?");
+  const adress = prompt("Qual seu endereço?");
+
   let message =
     "Olá, gostaria de fazer o pedido:" +
     "\n - Prato: " +
@@ -103,14 +110,13 @@ function apenasNumeros(string) {
 }
 
 // gera index para os arrays
-function getIndex(divParent){
-  switch(divParent){
+function getIndex(divParent) {
+  switch (divParent) {
     case "foodOptions":
       return 0;
     case "drinkOptions":
       return 1;
     case "dessertOptions":
       return 2;
-
   }
 }
