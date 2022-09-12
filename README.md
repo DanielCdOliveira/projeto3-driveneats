@@ -15,11 +15,11 @@
 
 ## Features
 
-- users can choose one item from each category
-- when all categories are complete the user can finish the order
-- modal with order summary
-- redirect to whatsapp with order summary
-- css class changes dynamically with javascript
+- Users can choose one item from each category
+- When all categories are complete the user can finish the order
+- Modal with order summary
+- Redirect to whatsapp with order summary
+- Css class changes dynamically with javascript
 
 ### Deploy 
 - Deploy using [GitHub Pages](https://danielcdoliveira.github.io/projeto3-driveneats/)
