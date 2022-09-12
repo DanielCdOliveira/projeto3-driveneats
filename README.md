@@ -1,6 +1,6 @@
 <div align="center"><img style = "width:100%;"src="https://i.imgur.com/8xjSrVo.png"></img></div>
 <hr>
-<h2 align=center>Instagram Website</h2>
+<h2 align=center>DrivenEats Website</h2>
 <h3 align=center>Web development Project</h3>
 <hr>
 <h4 align=center>First web project using Javascript</h4>
