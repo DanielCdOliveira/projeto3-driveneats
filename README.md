@@ -21,6 +21,9 @@
 - redirect to whatsapp with order summary
 - css class changes dynamically with javascript
 
+### Deploy 
+- Deploy using [GitHub Pages](https://danielcdoliveira.github.io/projeto3-driveneats/)
+
 ## Requirements
 
 - Layout
